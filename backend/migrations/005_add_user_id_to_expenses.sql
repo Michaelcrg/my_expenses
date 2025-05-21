@@ -1,0 +1,2 @@
+ALTER TABLE expenses ADD COLUMN user_id INT;
+ALTER TABLE expenses ADD CONSTRAINT fk_expense_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE;

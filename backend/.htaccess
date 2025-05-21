@@ -1,0 +1,22 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+ 
+</IfModule>
+
+<IfModule mod_headers.c>
+ 
+    Header set Access-Control-Allow-Origin "%{allowed_origin}e" env=allowed_origin
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization, X-API-KEY"
+    Header set Access-Control-Allow-Credentials "true"
+</IfModule>
+
+# Configurazione PHP
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+    Require all granted
+</FilesMatch>
+
+# Disabilita directory listing
+Options -Indexes

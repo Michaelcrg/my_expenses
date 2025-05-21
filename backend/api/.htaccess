@@ -1,0 +1,36 @@
+<IfModule mod_headers.c>
+    # Headers specifici per API
+    Header set Content-Type "application/json; charset=utf-8"
+    Header set X-API-Version "1.0"
+    
+    # CORS Headers
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, X-API-KEY, Authorization"
+    Header set Access-Control-Allow-Credentials "true"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Gestione preflight CORS per le richieste OPTIONS
+    RewriteCond %{REQUEST_METHOD} OPTIONS
+    RewriteRule ^ - [E=HTTP_ORIGIN:%{HTTP:Origin},L]
+    RewriteCond %{REQUEST_URI} ^/api/ [NC]
+
+</IfModule>
+
+# Configurazione PHP
+
+<IfModule mime_module>
+    AddHandler application/x-httpd-php .php
+</IfModule>
+
+# Configurazione di sicurezza aggiuntiva
+
+<IfModule mod_security.c>
+    SecFilterEngine Off
+</IfModule>
+
+# Disabilita directory listing
+
+Options -Indexes

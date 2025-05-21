@@ -1,0 +1,12 @@
+<svg
+  width="26"
+  height="22"
+  viewBox="0 0 50 50"
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+>
+
+  <rect x="5" y="22" width="40" height="6" fill="aquamarine" />
+
+  <rect x="22" y="4" width="6" height="40" fill="aquamarine" />
+</svg>
