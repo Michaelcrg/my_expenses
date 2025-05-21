@@ -10,10 +10,10 @@
 
 ## 📸 Screenshot
 
-![Dashboard](./screenshots/dashboard.png){.screenshot-img}
-![Aggiungi Spesa](./screenshots/addExpenses.png){.screenshot-img}
-![Calendario](./screenshots/calendar.png){.screenshot-img}
-![Vista Smartphone](./screenshots/smartphoneView.png){.screenshot-img}
+![Dashboard](./screenshots/dashboard.png)
+![Aggiungi Spesa](./screenshots/addExpenses.png)
+![Calendario](./screenshots/calendar.png)
+![Vista Smartphone](./screenshots/smartphoneView.png)
 
 ---
 
